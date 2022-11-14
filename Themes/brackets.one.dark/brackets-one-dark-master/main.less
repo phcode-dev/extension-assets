@@ -1,0 +1,229 @@
+/**
+ * Atom One Dark Theme
+ *
+ * Copyright (c) 2015 Hikio - twitter.com/hik_io
+ *
+ * 06/26/2015
+ * 
+ * Licensed under MIT
+ * GitHub https://github.com/hikio/brackets-one-dark
+ */
+
+// Config -----------------------------------
+@syntax-hue:          220;
+@syntax-saturation:   13%;
+@syntax-brightness:   18%;
+
+// Base colors -----------------------------------
+@syntax-accent: hsl(@syntax-hue, 100%, 66% );
+@syntax-guide:  fade(@syntax-fg, 15%);
+@syntax-fg:     @mono-1;
+@syntax-bg:     hsl(@syntax-hue, @syntax-saturation, @syntax-brightness);
+
+// Monochrome -----------------------------------
+@mono-1:  hsl(@syntax-hue, 14%, 71%); // default text
+@mono-2:  hsl(@syntax-hue,  9%, 55%);
+@mono-3:  hsl(@syntax-hue, 10%, 40%);
+@mono-4:  hsl(@syntax-hue, 10%, 25%);
+
+// Colors -----------------------------------
+@cyan:    hsl(187, 47%, 55%); // <-cyan
+@blue:    hsl(207, 82%, 66%); // <-blue
+@blue2:   @syntax-accent;     // hsl(217, 89%, 61%);
+@purple:  hsl(286, 60%, 67%); // <-purple
+@green:   hsl( 95, 38%, 62%); // <-green
+@red:     hsl(355, 90%, 70%); // original port: hsl(355, 65%, 65%); // <-red 1
+@red2:    hsl(  5, 48%, 51%); // <-red 2
+@orange:  hsl( 29, 80%, 65%); // original port: hsl(29, 54%, 61%); // <-orange 1
+@orange2: hsl( 39, 67%, 69%); // <-orange 2
+@yellow:  hsl(51, 100%, 83%); // new!
+
+// Definitions -----------------------------------
+@panel: hsl(@syntax-hue, 18%, 14%);
+@panel-dark: hsl(@syntax-hue, 18%, 10%);
+@background: hsl(@syntax-hue, 13%, 18%);  
+@background-lighten-1: rgba(204, 217, 255,0.05);
+@background-lighten-2: rgba(204, 217, 255,0.09);
+@background-lighten-3: rgba(204, 217, 255, 0.12);
+@foreground: @mono-1; //#abb2bf; //original port: #eff3ff;
+@gray: @mono-3; // #686C83;
+@gray-darker: @mono-4; // #393b47;
+
+/* Editor */
+.panel, #main-toolbar {
+  background: @panel;
+}
+
+#working-set-list-container,
+.dark #editor-holder .pane-header{
+  background: @panel-dark;
+}
+
+.working-set-header,
+#project-files-header .btn-alt-quiet {
+  background: @background-lighten-1;
+}
+.working-set-header>span {
+  background: transparent;
+}
+
+.sidebar-selection, 
+.filetree-selection,
+.sidebar-selection-extension, 
+.filetree-selection-extension{
+  background: @background;
+}
+
+.dark #status-bar,
+.dark #status-indicators {
+  background: @panel-dark;
+  border-top-color: @panel;
+}
+
+.dark a,
+.open-files-container li.selected a {
+  color: @blue2;
+}
+
+
+/* Code Styling */
+.CodeMirror, .CodeMirror-scroll {
+  background-color: @background;
+  color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+  background: @background-lighten-1;
+}
+
+.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+  box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+  .CodeMirror-gutter-elt {
+    background: transparent;
+    color: @gray;
+  }
+  .inline-widget .CodeMirror-gutter-elt {
+    color: red;    
+  }
+}
+.cm-string-2, .cm-hr {color: @cyan;}
+.cm-number, .cm-attribute, .cm-qualifier, .cm-plus, .cm-atom {color: @orange;}
+.cm-def {color: @purple;}
+.cm-string {color: @green;}
+.cm-property, .cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @red;}
+.cm-comment {color: @gray; font-style: italic;}
+.cm-error, .cm-minus {color: @red2;}
+.cm-header {color: @orange;}
+.cm-link {color: @green; text-decoration: none;}
+.cm-rangeinfo {color: @purple;}
+.cm-keyword, .cm-builtin, .cm-tag, .cm-quote {color: @green;}
+
+/* Extra CSS */
+.CodeMirror-searching {
+  color: #fff !important;
+  border:1px solid @blue2;
+  margin:0 -1px;
+  background-color: @background-lighten-2;
+  box-shadow: 0px 0px 6px rgba(66, 133, 244,0.4);
+  &.searching-current-match {
+    color: #fff;
+    background-color: @blue2;
+    box-shadow: 0px 0px 6px rgba(66, 133, 244,0.8);
+  }
+}
+
+.CodeMirror-cursor {
+  border-left: 2px solid @blue2 !important;
+}
+
+.CodeMirror-gutters {
+  background-color: @background;
+  border-right: 1px solid @background-lighten-1;
+}
+
+.CodeMirror-linenumber {
+  color: @gray-darker;
+}
+
+.CodeMirror .CodeMirror-selected {
+  background: @background-lighten-1;
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: @background-lighten-2;
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {
+  /* Ensure visibility against gray inline editor background */
+  background-color: @background-lighten-2;
+  color: @foreground !important;
+  border-bottom: 1px solid @blue2;
+}
+
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+  border-left: none !important;
+  border-bottom: 1px solid #fff;
+}
+
+.CodeMirror {
+  .CodeMirror {
+    background: transparent;
+  }
+
+  .CodeMirror .CodeMirror-gutters {
+    background: transparent;
+    border-right: none;
+  }
+
+  .CodeMirror .CodeMirror-activeline-background {
+    background: transparent;
+  }
+
+  .CodeMirror .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background: transparent;
+    color: @gray;
+  }
+
+  .CodeMirror-focused .CodeMirror-activeline-background {
+    background: #000;
+  }
+
+  .CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+      background: @background-lighten-1;
+      color: #fff;
+    }
+  }
+}
+
+.CodeMirror-foldgutter-open:after {
+  color: @gray-darker;
+}
+.CodeMirror-foldgutter-folded:after {
+  color: @gray;
+}
+
+.CodeMirror.over-gutter, .CodeMirror-activeline {
+  .CodeMirror-foldgutter-open:after {
+    color: @gray;
+  }
+}
+
+.CodeMirror-foldmarker {
+  border-color: @gray-darker;
+  color: @foreground;
+  background: @background-lighten-1;
+}
+
+/* Non-editor styling */
+.image-view,
+.not-editor {
+  background-color: @background;
+}
+
+.view-pane .image-view {
+  color: @foreground;
+}

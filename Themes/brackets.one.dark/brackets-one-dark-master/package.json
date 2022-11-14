@@ -1,0 +1,20 @@
+{
+  "title": "One Dark Theme",
+  "name": "brackets.one.dark",
+  "description": "GitHub Atom editor One Dark theme, ported for Brackets",
+  "version": "0.0.2",
+  "author": "Hikio (http://hik.io)",
+  "homepage": "https://github.com/hikio/brackets-one-dark",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hikio/brackets-one-dark.git"
+  },
+  "engines": {
+    "brackets": ">=0.42.0"
+  },
+  "theme": {
+    "file": "main.less",
+    "dark": true
+  },
+  "screenshot": "screenshot.png"
+}

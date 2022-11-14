@@ -1,0 +1,20 @@
+{
+    "title": "Railcasts",
+    "name": "railcasts-theme",
+    "description": "Railcasts Theme for Brackets.",
+    "version": "1.0.6",
+    "author": "Andrew MacKenzie <a.mackenzie@gmail.com> (http://github.com/mackenza)",
+    "homepage": "https://github.com/Brackets-Themes/Railcasts",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Brackets-Themes/Railcasts.git"
+    },
+    "engines": {
+        "brackets": ">=0.42.0"
+    },
+    "theme": {
+        "file": "railcasts.css",
+        "dark": true
+    },
+    "screenshot": "railcasts_php.png"
+}
