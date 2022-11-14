@@ -1,0 +1,14 @@
+{
+    "name": "robingruenke.icecream",
+    "title": "Icecream Theme",
+    "description": "Pistachio, Strawberry and Blueberry!",
+    "homepage": "https://github.com/eimfach/brackets-theme-icecream",
+    "version": "1.0.1",
+    "author": "Robin Gruenke",
+    "license": "MIT",
+    "theme": {
+        "file": "theme.less",
+        "dark": false
+    },
+    "keywords": ["theme"]
+}

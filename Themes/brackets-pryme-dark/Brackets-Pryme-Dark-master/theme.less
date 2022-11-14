@@ -1,0 +1,174 @@
+/*
+"name": "brackets_pryme_dark",
+"title": "Brackets Pryme Theme - Dark",
+"version": "1.0.7", 
+"description": "Nice Dark Brackets Theme for Dark lovers to make coding fun and an enjoyable experience. This theme is based on Brackets Pryme Light theme. Happy Coding!",
+"homepage": "https://github.com/AriShPryme/Brackets-Pryme-Dark",
+"author": "AriSh <arishpryme@gmail.com> (http://www.prymera.xyz)",
+"license": "MIT",
+"This is a dark theme made for brackets. This theme will bring some life to boring coding work."
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+@background: #001b22;
+@foreground: #02fffc;
+
+/* Color Scheme */
+.cm-string {color: #22cd01;}
+.cm-string.cm-property {color: #666;}
+.cm-error {background: rgba(255,255,115,0.45); color: #fff !important; padding: 0px 5px;}
+.cm-meta {color: #fb3a05; font-weight:500;}
+.cm-comment {color: #4f594f; font-size:16px; font-weight: 600; letter-spacing:0.5px;}
+.cm-atom {color: #de935f;}
+.cm-number {color: #ff00a8;}
+.cm-link {color: #129289;text-decoration: none;}
+.cm-property {color: #b5bd68;}
+.cm-attribute {color: #b5bd68;}
+.cm-keyword {color: #fb3a05;}
+.cm-variable {color: #fe971d;}
+.cm-variable-2 {color: #fe971d;}
+.cm-variable-3 {color: #fe971d;}
+.cm-qualifier {color: #01e0dd;}
+.cm-builtin {color: #b5bd68;}
+.cm-def {color: #01e0dd;}
+.cm-bracket {color: antiquewhite;}
+.cm-operator {color: antiquewhite;}
+.cm-tag {color: #4285F4;}
+
+/* Editor Style */
+
+.CodeMirror,
+.CodeMirror .CodeMirror-scroll {
+	background: @background;
+	color: @foreground;
+	font-family: 'Source Code Pro Light', 'Montserrat Light', 'Oxygen Mono', 'Raleway', 'Prestige Elite Std', 'Source Sans Pro';
+	font-size: 20px;
+	line-height: 28px;
+}
+
+#not-editor,
+#image-holder {
+	background-color: #222;
+	color: #F8F8F2;
+	transition: background-color 0.3s ease-out;
+}
+
+div.CodeMirror-selected {
+	background-color: #02fffc;
+	opacity: .25;
+}
+
+.CodeMirror-gutters {
+	background-color: #011115;
+//	border-right: 1px solid #001a20;
+}
+
+.CodeMirror-guttermarker {
+	color: #435e70;
+}
+
+.CodeMirror-guttermarker-subtle {
+	color: #435e70;
+}
+
+.CodeMirror-linenumber {
+	color: #435e70;
+}
+
+.CodeMirror-cursor {
+	border-left: 2px solid #ff000c !important;
+}
+
+.CodeMirror-activeline-background,
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+	background-color: #00323e;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+	background-color: #00323e;
+	color: #9cdcfe;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
+	background-color: @background;
+	color: #767676;
+}
+
+.CodeMirror-matchingtag {
+	background-color: #004151;
+	border-top: 1px solid #004151;
+	border-bottom: 2px solid #ff000c;
+}
+
+
+.CodeMirror-matchingbracket {
+	background-color: #004151 !important;
+	color: #ff420e !important;
+	border-top: 1px solid #004151;
+	border-bottom: 3px solid #c9c9c9;
+}
+
+
+/* Extensions */
+
+
+/* Brackets-Vim (https://github.com/megalord/brackets-vim) */
+
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor {
+	background: rgba(248, 248, 242, 0.5) !important;
+}
+
+
+/* Show Whitespace (https://github.com/DennisKehrig/brackets-show-whitespace) */
+
+.CodeMirror .cm-dk-whitespace-space::before,
+.CodeMirror .cm-dk-whitespace-tab::before,
+.CodeMirror .cm-dk-whitespace-leading-space::before,
+.CodeMirror .cm-dk-whitespace-leading-tab::before,
+.CodeMirror .cm-dk-whitespace-trailing-space::before,
+.CodeMirror .cm-dk-whitespace-trailing-tab::before {
+	background-color: #75715E !important;
+}
+
+
+/* Code Folding (https://github.com/thehogfather/brackets-code-folding) */
+
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-blank,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-open {
+	color: #75715E;
+}
+
+.CodeMirror-foldgutter-open::after {
+	content: "\25bd";
+}
+
+.CodeMirror-foldmarker {
+	background-color: #bbb;
+	border-color: #555;
+	color: #555;
+//	padding: 0 10px;
+}
+
+
+/* Non-editor styling */
+
+#image-holder,
+#not-editor {
+	background-color: @background;
+}
+
+#image-holder {
+	color: @foreground;
+}
+
+//place at line 57
+.CodeMirror {
+	border-left-color: #1B1B1B;
+}
+

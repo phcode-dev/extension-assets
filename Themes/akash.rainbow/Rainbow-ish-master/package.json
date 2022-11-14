@@ -1,0 +1,22 @@
+{
+    "name": "akash.rainbow",
+    "title": "Rainbow-ish",
+    "description": "A VIBGYOR colored theme",
+    "version": "1.0.2",
+    "author": "Akash Vartak (http://akashvartak.tk/)",
+    "homepage": "https://github.com/akash-vartak/Simply-Unique",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:akash-vartak/Simply-Unique.git"
+    },
+    "theme": {
+        "file": "rainbowish.less",
+        "dark": true
+    },
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.42.0"
+    },
+    "keywords": ["dark"],
+    "bugs": "https://github.com/akash-vartak/Simply-Unique/issues"
+}

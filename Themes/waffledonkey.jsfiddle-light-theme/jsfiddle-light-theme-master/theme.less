@@ -1,0 +1,232 @@
+/* Define variables */
+
+@color00: #FFF;
+@color01: #000;
+@color02: #39464E;
+@color03: #4A4543;
+@color04: #A0A1A7;
+@color05: #B9B6D2;
+@color06: #BEC8CD;
+@color07: #D7D4F0;
+@color08: #E6E9EB;
+@color09: #F3F5F6;
+@color10: #ED5C65;
+@color11: #F18C16; //#FF8F0D;
+@color12: #4695EE; //#4695ee;
+@color13: #249D82; //#36AC3B; //#249d7f;
+@color14: #A151D2; //#a853cc;
+@color15: #219;    //#1117AD;
+@highlight: #FFFF86;
+@negative: #FF4D4D;
+
+/* Begin Theme */
+.CodeMirror-gutters {
+    background-color: @color09;
+    border-right: solid 1px @color08;
+    height: 100%;
+}
+.CodeMirror-foldgutter {
+    width: 1em;
+}
+.CodeMirror-linenumbers {
+    padding-right: 5px;
+    width: 3.7em !important;
+}
+.CodeMirror-linenumber {
+    color: @color05;
+    font-size: 1em;
+    padding: 0 5px 0 0;
+    text-shadow: 0 0 1px @color00;
+}
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+    font-family: monospace;
+    font-size: .6em;
+    height: 1em;
+    line-height: 2.2em;
+    text-shadow: none;
+}
+.CodeMirror-foldgutter-folded {
+    font-size: .5rem;
+}
+
+.CodeMirror-foldgutter-open:after {
+    // Those little arrows in the gutter
+    color: @color05;
+}
+
+.CodeMirror-activeline .CodeMirror-foldgutter-open:after {
+    color: darken(@color04, 15%) !important;
+}
+
+.CodeMirror-foldgutter-folded:after {
+    // The arrows after you collapse code
+    color: @color03;
+}
+
+.CodeMirror.over-gutter,
+.CodeMirror-activeline {
+    .CodeMirror-foldgutter-open:after {
+        // Arrows when hovering on the gutter
+        color: @color05;
+    }
+}
+
+.CodeMirror-foldmarker {
+    // The [...] marking collapsed code
+    border-color: @color03;
+    background-color: @color03;
+    color: @color00;
+}
+
+.CodeMirror-scroll {
+    // Background color of main window
+    background-color: @color09;
+    // Color of otherwise un-styled text
+    color: @color03;
+    line-height: 1.55em;
+}
+.CodeMirror-cursor {
+    // The cursor
+    border-left: 1px solid @color02;
+    height: 1em;
+}
+.CodeMirror-selected {
+    // Highlighed text
+    background-color: @color07;
+    border: 0;
+    outline: none;
+}
+// if you want the ability to select a word and see all matches in the document -- can be useful
+/*
+.cm-matchhighlight {
+    background: @highlight;
+    padding: 3px 0;
+}
+.cm-matchhighlight.cm-property,
+.cm-matchhighlight.cm-qualifier,
+.cm-matchhighlight.cm-variable,
+.cm-matchhighlight.cm-variable-2 {
+    color: darken(inherit, 30%);
+}
+*/
+.CodeMirror-focused .cm-matchhighlight {
+    border-width: 0 !important;
+}
+
+
+.cm-em {font-style: italic}
+.cm-link {text-decoration: underline}
+.cm-strikethrough {text-decoration: line-through}
+
+.cm-header {color: @color12;}
+.cm-positive,
+.cm-quote {
+    color: @color13;
+}
+.cm-negative {color: @negative;}
+.cm-keyword {color: @color14;}
+.cm-comment {color: @color04;}
+.cm-property {color: @color02;}
+.cm-string {color: @color13;}
+.cm-number,
+.cm-string-2 {
+    color: @color10;
+}
+.cm-tag.cm-bracket {color: @color01;}
+.cm-atom {color: @color15;}
+.cm-keyword,
+.cm-quote {
+    color: @color14;
+}
+
+.cm-attribute,
+.cm-builtin,
+.cm-def,
+.cm-qualifier,
+.cm-keyword + span[class^='cm-m-javascript'] + .cm-variable,
+.cm-dk-whitespace-leading-space + .cm-variable {
+    color: @color11;
+}
+.cm-tag,
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-operator + span[class^='cm-m-javascript'] + .cm-variable {
+    color: @color12;
+}
+
+// allow for styling javascript template delimiters (.cm-tag) this will also style html tags, but we'll undo that
+.cm-m-xml.cm-tag,
+.cm-m-xml.cm-keyword {
+    color: @color01;
+    text-shadow: 0 0 1px @color00;
+}
+// javascript template variables
+.cm-m-xml.cm-tag ~ .cm-m-xml.cm-variable {
+    color: @color10;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 1px @color00;
+}
+// allow for styling HTML tags and javacsript template keywords (.cm-tag in html and .cm-keyword for js templating)
+.cm-m-xml.cm-bracket + .cm-m-xml.cm-tag {
+    color: @color12;
+    font-weight: normal;
+}
+// style html brackets '<' & '>' [/]
+.cm-m-xml.cm-bracket {
+    color: @color03;
+    font-weight: normal;
+}
+// should you wish to style html attributes and javascript template variables
+/*
+.cm-m-xml.cm-attribute,
+.cm-m-xml.cm-variable {
+    font-style: italic;
+}
+*/
+.cm-m-xml.cm-tag {color: @color03;}
+// javascript keywords (for, in, etc.)
+.cm-m-xml.cm-keyword {
+    color: @color01;
+    font-weight: bold;
+}
+
+// mostly useless, but what the hell?
+.cm-atom,
+.cm-attribute,
+.cm-builtin,
+.cm-comment,
+.cm-def,
+.cm-keyword,
+.cm-number,
+.cm-property,
+.cm-qualifier,
+.cm-quote,
+.cm-tag,
+.cm-variable,
+.cm-variable-2,
+.cm-variable-3,
+.cm-string,
+.cm-string-2 {
+    text-shadow: 0 1px 1px @color00;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: @color03;
+    text-shadow: 0 0 1px @color00;
+}
+
+.CodeMirror-nonmatchingbracket,
+.CodeMirror-matchingbracket {
+    background: @color10;
+    color: @color00 !important;
+    padding: 3px 0;
+}
+// how matching HTML tags should be handled
+.cm-m-xml.CodeMirror-matchingtag {
+    background: transparent;
+}
+/* End Theme */
