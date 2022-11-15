@@ -1,0 +1,18 @@
+{
+    "name": "wombatish-theme",
+    "title": "Wombatish",
+    "description": "This theme is based on Wombatish for Sublime text, which is based on Wombat",
+    "homepage": "https://github.com/vlad-saling/wombatish-brackets",
+    "version": "1.0.1",
+    "author": "Vlad Saling (https://github.com/vlad-saling)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:vlad-saling/wombatish-brackets.git"
+    },
+    "theme": {
+        "file": "theme.less",
+        "dark": true
+    },
+    "keywords": ["theme"]
+}
